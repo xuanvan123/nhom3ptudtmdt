@@ -1446,12 +1446,12 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`id`, `full_name`, `email`, `phone`, `password`, `photo`, `role`, `status`) VALUES
-(5, 'Quỳnh', 'quynh@gmail.com', '425903895', '$2y$10$gcfRohw0ONE/.4SEctPzCejk5rMjcygqs06/WUFCPcviVWfZboBf2', 'default.jpg', 'Quản Lý Đơn Hàng', 'active'),
-(6, 'Vĩ', 'vi@gmail.com', '325099306', '$2y$10$2HMOEKIILIIGJQs.qUKQvOeOnaZbGxq7Tl/F1k1vuZxFHJyaxCMnq', 'default.jpg', 'Quản Trị Viên Cấp Cao', 'active'),
-(7, 'Vy', 'vy@gmail.com', '732750', '$2y$10$.RzYQlLBZIPn4zFk4WeweO0ZDlSiChXobjLxPnlLMnogEOUWKKfiK', 'default.jpg', 'Quản Trị Viên', 'active'),
-(8, 'Thảo', 'thao@gmail.com', '278970294', '$2y$10$YjJeW2bh81ac8lOdHUNeWOuMkYADqYvC62C7FnIUoDMUD3XTDjIf2', 'default.jpg', 'Quản Lý Sản Phẩm', 'active'),
-(9, 'Phúc', 'phuc@gmail.com', '72947902', '$2y$10$IWiwaMrK/2zxRl3ujarDUORMdqzDqsY79LE2xJKfhtK2uTTSongQu', 'default.jpg', 'Chăm Sóc Khách Hàng', 'active'),
-(11, 'heo', 'heo@gmail.com', '8207540543', '$2y$10$WdHnS0MnUycU0RU.EsocxO0RNbwqjveNs/jIiyO47EU1jIXquX6iK', 'default.jpg', 'Quản Trị Viên', 'inactive');
+(5, 'Văn', 'quynh@gmail.com', '425903895', '$2y$10$gcfRohw0ONE/.4SEctPzCejk5rMjcygqs06/WUFCPcviVWfZboBf2', 'default.jpg', 'Quản Lý Đơn Hàng', 'active'),
+(6, 'Doanh', 'vi@gmail.com', '325099306', '$2y$10$2HMOEKIILIIGJQs.qUKQvOeOnaZbGxq7Tl/F1k1vuZxFHJyaxCMnq', 'default.jpg', 'Quản Trị Viên Cấp Cao', 'active'),
+(7, 'Ngân', 'vy@gmail.com', '732750', '$2y$10$.RzYQlLBZIPn4zFk4WeweO0ZDlSiChXobjLxPnlLMnogEOUWKKfiK', 'default.jpg', 'Quản Trị Viên', 'active'),
+(8, 'Mai', 'thao@gmail.com', '278970294', '$2y$10$YjJeW2bh81ac8lOdHUNeWOuMkYADqYvC62C7FnIUoDMUD3XTDjIf2', 'default.jpg', 'Quản Lý Sản Phẩm', 'active'),
+(9, 'Khanh', 'phuc@gmail.com', '72947902', '$2y$10$IWiwaMrK/2zxRl3ujarDUORMdqzDqsY79LE2xJKfhtK2uTTSongQu', 'default.jpg', 'Chăm Sóc Khách Hàng', 'active'),
+(11, 'Khanh', 'heo@gmail.com', '8207540543', '$2y$10$WdHnS0MnUycU0RU.EsocxO0RNbwqjveNs/jIiyO47EU1jIXquX6iK', 'default.jpg', 'Quản Trị Viên', 'inactive');
 
 -- --------------------------------------------------------
 
