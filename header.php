@@ -264,7 +264,7 @@ foreach ($result as $row) {
 </div>-->
 
 <!-- top bar -->
-<div class="top" style="background-color: #931926; color: #ffffff;">
+<div class="top" style="background-color: #28A745; color: #ffffff;">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-sm-6 col-xs-12">
@@ -300,73 +300,68 @@ foreach ($result as $row) {
 
 <div class="header">
 	<div class="container">
-		<div class="row inner">
-			<div class="col-md-4 logo">
-				<a href="index.php"><img src="assets/uploads/<?php echo $logo; ?>" alt="logo image"></a>
-			</div>
-			
-			<div class="col-md-5 right">
-				<ul>
-					
-					<?php
-					if(isset($_SESSION['customer'])) {
-						?>
-						<li><i class="fa fa-user"></i> <?php echo $_SESSION['customer']['cust_name']; ?></li>
-						<li><a href="dashboard.php"><i class="fa fa-home"></i> <?php echo "Trang cá nhân"; ?></a></li>
-						<?php
-					} else {
-						?>
-						<li><a href="login.php"><i class="fa fa-sign-in"></i> <?php echo "Đăng nhập"; ?></a></li>
-						<li><a href="registration.php"><i class="fa fa-user-plus"></i> <?php echo "Đăng ký"; ?></a></li>
-						<?php	
-					}
-					?>
+		<div class="row inner" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding: 10px;px 0;">
 
-					<li><a href="cart.php"><i class="fa fa-shopping-cart"></i> <?php echo "Giỏ hàng"; ?> (<?php
-					if(isset($_SESSION['cart_p_id'])) {
-						$table_total_price = 0;
-						$i=0;
-	                    foreach($_SESSION['cart_p_qty'] as $key => $value) 
-	                    {
-	                        $i++;
-	                        $arr_cart_p_qty[$i] = $value;
-	                    }                    $i=0;
-	                    foreach($_SESSION['cart_p_current_price'] as $key => $value) 
-	                    {
-	                        $i++;
-	                        $arr_cart_p_current_price[$i] = $value;
-	                    }
-	                    for($i=1;$i<=count($arr_cart_p_qty);$i++) {
-	                    	$row_total_price = intval($arr_cart_p_current_price[$i]) * intval($arr_cart_p_qty[$i]);
+  <!-- Logo (dịch phải nhẹ) -->
+  <div class="col-md-3 col-sm-12 logo" style="display:flex;align-items:center;">
+    <a href="index.php" style="display:inline-block;margin-left:14px;">
+      <img src="assets/uploads/<?php echo $logo; ?>" alt="logo image" style="max-height:60px;">
+    </a>
+  </div>
 
+  <!-- Search giữa, nút xanh ReSip -->
+  <div class="col-md-6 col-sm-12" style="display:flex;justify-content:center;">
+    <form role="search" action="search-result.php" method="get" style="display:flex;align-items:center;width:100%;max-width:680px;">
+      <?php $csrf->echoInputField(); ?>
+      <input type="text"
+             class="form-control"
+             name="search_text"
+             placeholder="<?php echo "Nhập sản phẩm cần tìm"; ?>"
+             style="flex:1;height:35px;font-size:16px;padding:10px 14px;border-radius:6px;">
+      <button type="submit"
+              class="btn"
+              style="height:35px;margin-left:10px;padding:0 18px;border:none;border-radius:6px;
+                     background:#28A745;color:#fff;font-size:15px;">
+        <?php echo "Tìm kiếm"; ?>
+      </button>
+    </form>
+  </div>
 
-	                        $table_total_price = $table_total_price + $row_total_price;
-	                    }
-						echo number_format($table_total_price);
-					} else {
-						echo '0.00';
-					}
-					?><?php echo "₫"; ?>)</a></li>
-				</ul>
-			</div>
-			<div class="col-md-3 search-area">
-				<form class="navbar-form navbar-left" role="search" action="search-result.php" method="get">
-					<?php $csrf->echoInputField(); ?>
-					<div class="form-group">
-						<input type="text" class="form-control search-top" placeholder="<?php echo "Nhập sản phẩm cần tìm"; ?>" name="search_text">
-					</div>
-					<button type="submit" class="btn btn-danger" style="background-color: #d8c7c3; color:black"><?php echo "Tìm kiếm"; ?></button>
-				</form>
-			</div>
-		</div>
+  <!-- Tài khoản + Giỏ hàng trên MỘT dòng -->
+  <div class="col-md-3 col-sm-12" style="display:flex;justify-content:flex-start;align-items:center; padding-left:20px;">
+    <div style="white-space:nowrap;font-size:14px; margin-left:10px;">
+      <?php if(isset($_SESSION['customer'])): ?>
+        <i class="fa fa-user"></i> <?php echo $_SESSION['customer']['cust_name']; ?> |
+        <a href="dashboard.php">Trang cá nhân</a> |
+      <?php else: ?>
+        <a href="login.php"><i class="fa fa-sign-in"></i> Đăng nhập</a> |
+        <a href="registration.php"><i class="fa fa-user-plus"></i> Đăng ký</a> |
+      <?php endif; ?>
+      <a href="cart.php">
+        <i class="fa fa-shopping-cart"></i> Giỏ hàng (
+        <?php
+          if(isset($_SESSION['cart_p_id'])) {
+            $total = 0; $i=0;
+            foreach($_SESSION['cart_p_qty'] as $k=>$v){ $i++; $qty[$i]=$v; }
+            $i=0; foreach($_SESSION['cart_p_current_price'] as $k=>$v){ $i++; $price[$i]=$v; }
+            for($i=1;$i<=count($qty);$i++){ $total += intval($price[$i]) * intval($qty[$i]); }
+            echo number_format($total);
+          } else { echo '0.00'; }
+        ?><?php echo "₫"; ?>)
+      </a>
+    </div>
+  </div>
+
+</div>
+
 	</div>
 </div>
 
-<div class="nav" style="background-color: #931926; color: #ffffff;">
-	<div class="container" style="background-color: #931926; color: #ffffff;">
+<div class="nav" style="background-color: #026625; color: #ffffff;">
+	<div class="container" style="background-color: #026625; color: #ffffff;">
 		<div class="row">
 			<div class="col-md-12 pl_0 pr_0">
-				<div class="menu-container" style="background-color: #931926; color: #ffffff;">
+				<div class="menu-container" style="background-color: #026625; color: #ffffff;">
 					<div class="menu">
 						<ul>
 							<li><a href="index.php">Trang chủ</a></li>
@@ -434,4 +429,6 @@ foreach ($result as $row) {
 			</div>
 		</div>
 	</div>
+	
 </div>
+
