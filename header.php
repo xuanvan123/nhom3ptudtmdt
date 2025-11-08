@@ -305,7 +305,7 @@ foreach ($result as $row) {
   <!-- Logo (dịch phải nhẹ) -->
   <div class="col-md-3 col-sm-12 logo" style="display:flex;align-items:center;">
     <a href="index.php" style="display:inline-block;margin-left:14px;">
-      <img src="assets/uploads/<?php echo $logo; ?>" alt="logo image" style="max-height:60px;">
+      <img src="assets/uploads/<?php echo $logo; ?>" alt="logo image" style="max-height:63px;">
     </a>
   </div>
 
