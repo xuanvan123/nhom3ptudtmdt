@@ -1837,3 +1837,45 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+-- ================================
+-- 📌 CẬP NHẬT SLIDER CHO RESIP
+-- Mục đích:
+--   • Thay nội dung slider mặc định (MIJU/EcommerceWeb) thành nội dung thương hiệu ReSip
+--   • Các slider này hiển thị trên trang chủ website (Home Page)
+--   • Sửa các dòng dữ liệu có id = 1, 2, 3 trong bảng tbl_slider
+-- Lưu ý:
+--   • UPDATE = ghi đè dữ liệu cũ, không thêm dòng mới
+--   • Chỉ sửa nội dung, không thay đổi cấu trúc bảng
+--   • Nếu chưa có dữ liệu (id 1,2,3) thì lệnh này sẽ không chạy
+-- ================================
+
+UPDATE `tbl_slider` 
+SET 
+    `photo` = 'slider-1.jpg',                         -- Tên ảnh slider hiển thị
+    `heading` = 'Chào Mừng Đến Với ReSip',            -- Tiêu đề chính của slider
+    `content` = 'Chai nước gấp gọn – vì hành tinh xanh', -- Nội dung mô tả
+    `button_text` = 'Khám Phá Ngay',                  -- Chữ trên nút bấm
+    `button_url` = 'product-category.php?id=1&type=eco-bottle', -- Link khi bấm nút
+    `position` = 'Center'                             -- Vị trí text (Left - Center - Right)
+WHERE `id` = 1;
+
+UPDATE `tbl_slider` 
+SET 
+    `photo` = 'slider-2.jpg',
+    `heading` = 'Giảm Giá 50% - Ưu Đãi Đặc Biệt',
+    `content` = 'Sở hữu bình ReSip với giá tốt nhất',
+    `button_text` = 'Mua Ngay',
+    `button_url` = '#',
+    `position` = 'Right'
+WHERE `id` = 2;
+
+UPDATE `tbl_slider` 
+SET 
+    `photo` = 'slider-3.jpg',
+    `heading` = 'Sản Phẩm Mới – Màu Pastel',
+    `content` = 'Phong cách tối giản – bền vững',
+    `button_text` = 'Xem Bộ Sưu Tập',
+    `button_url` = '#',
+    `position` = 'Left'
+WHERE `id` = 3;
