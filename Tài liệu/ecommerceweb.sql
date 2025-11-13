@@ -1968,3 +1968,7 @@ VALUES (
     'Quản Trị Viên',
     'active'
 );
+-- update pass cac user còn lại
+UPDATE tbl_user
+SET password = '$2b$10$RpXMBVTtY.05tizQgIM.g.StjpNjWUGUz8fXIvjF0ROIHgMWK.dFW'
+WHERE id IN (5,6,7,8,9,11);
