@@ -1,5 +1,5 @@
 Thông tin đăng nhập vào trang Admin
-Link trang quản l1y Admin: http://localhost/nhom3ptudtmdt/login.php
+Link trang quản l1y Admin: http://localhost/nhom3ptudtmdt/admin/login.php
 
 Tài khoản admin
 van@resip.com
