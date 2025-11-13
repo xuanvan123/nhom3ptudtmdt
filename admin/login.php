@@ -8,17 +8,15 @@ $csrf = new CSRF_Protect();
 $error_message='';
 
 if(isset($_POST['form1'])) {
-        
     if(empty($_POST['email']) || empty($_POST['password'])) {
         $error_message = 'Email và/hoặc mật khẩu không được để trống<br>';
     } else {
-		
-		$email = strip_tags($_POST['email']);
-		$password = strip_tags($_POST['password']);
+        $email = strip_tags($_POST['email']);
+        $password = strip_tags($_POST['password']);
 
-    	$statement = $pdo->prepare("SELECT * FROM tbl_user WHERE email=? AND status=?");
-    	$statement->execute(array($email,'Active'));
-    	$total = $statement->rowCount();    
+        $statement = $pdo->prepare("SELECT * FROM tbl_user WHERE email=? AND status=?");
+        $statement->execute(array($email,'active'));
+        $total = $statement->rowCount();    
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);    
         if($total==0) {
             $error_message .= 'Email không hợp lệ<br>';
@@ -27,20 +25,17 @@ if(isset($_POST['form1'])) {
                 $row_password = $row['password'];
             }
         
-			if (!password_verify($password, $row_password)) {
-				$error_message .= 'Mật khẩu không đúng<br>';
-			}
-			
-			 else {       
-				$_SESSION['user'] = $row;
-				header("location: index.php");
-			}
-			
+            if (!password_verify($password, $row_password)) {
+                $error_message .= 'Mật khẩu không đúng<br>';
+            } else {       
+                $_SESSION['user'] = $row;
+                header("location: index.php");
+            }
         }
     }
-
-    
 }
+
+
 ?>
 <!DOCTYPE html>
 <html>

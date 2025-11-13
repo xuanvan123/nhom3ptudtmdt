@@ -1879,3 +1879,92 @@ SET
     `button_url` = '#',
     `position` = 'Left'
 WHERE `id` = 3;
+-- update data user
+UPDATE tbl_user
+SET 
+    full_name = CASE id
+        WHEN 5 THEN 'Văn'
+        WHEN 6 THEN 'Doanh'
+        WHEN 7 THEN 'Ngân'
+        WHEN 8 THEN 'Mai'
+        WHEN 9 THEN 'Khanh'
+        WHEN 11 THEN 'Khanh'
+    END,
+    
+    email = CASE id
+        WHEN 5 THEN 'van@resip.com'
+        WHEN 6 THEN 'doanh@resip.com'
+        WHEN 7 THEN 'ngan@resip.com'
+        WHEN 8 THEN 'mai@resip.com'
+        WHEN 9 THEN 'khanh@resip.com'
+        WHEN 11 THEN 'khanh2@resip.com'
+    END,
+    
+    phone = CASE id
+        WHEN 5 THEN '425903895'
+        WHEN 6 THEN '325099306'
+        WHEN 7 THEN '732750'
+        WHEN 8 THEN '278970294'
+        WHEN 9 THEN '72947902'
+        WHEN 11 THEN '8207540543'
+    END,
+
+    password = '$2y$10$CwTycUXWue0Thq9StjUM0uJ8i1uVq6Z9erjR.xvu1YgY1HG1HG9Ga',
+
+    photo = 'default.jpg',
+
+    role = CASE id
+        WHEN 5 THEN 'Quản Lý Đơn Hàng'
+        WHEN 6 THEN 'Quản Trị Viên Cấp Cao'
+        WHEN 7 THEN 'Quản Trị Viên'
+        WHEN 8 THEN 'Quản Lý Sản Phẩm'
+        WHEN 9 THEN 'Chăm Sóc Khách Hàng'
+        WHEN 11 THEN 'Quản Trị Viên'
+    END,
+
+    status = CASE id
+        WHEN 5 THEN 'active'
+        WHEN 6 THEN 'active'
+        WHEN 7 THEN 'active'
+        WHEN 8 THEN 'active'
+        WHEN 9 THEN 'active'
+        WHEN 11 THEN 'inactive'
+    END
+
+WHERE id IN (5,6,7,8,9,11);
+-- update customer settings
+UPDATE tbl_customer
+SET 
+    cust_name = CASE cust_id
+        WHEN 12 THEN 'Văn'
+        WHEN 13 THEN 'Doanh'
+        WHEN 14 THEN 'Mai'
+        WHEN 15 THEN 'Ngân'
+        WHEN 16 THEN 'Khanh'
+        WHEN 17 THEN 'Văn'
+        WHEN 18 THEN 'Doanh'
+    END,
+
+    cust_email = CASE cust_id
+        WHEN 12 THEN 'van@gmail.com'
+        WHEN 13 THEN 'doanh@gmail.com'
+        WHEN 14 THEN 'mai@gmail.com'
+        WHEN 15 THEN 'ngan@gmail.com'
+        WHEN 16 THEN 'khanh@gmail.com'
+        WHEN 17 THEN 'van@gmail.com'
+        WHEN 18 THEN 'doanh@gmail.com'
+    END,
+
+    cust_password = '202cb962ac59075b964b07152d234b70'
+WHERE cust_id IN (12,13,14,15,16,17,18);
+-- thêm admin mới
+INSERT INTO tbl_user (full_name, email, phone, password, photo, role, status)
+VALUES (
+    'Admin',
+    'admin@resip.com',
+    '00000000',
+    '$2y$10$rgxBevV66PvMUm6swHgNhOY4U4xIiazZeRUay.HDVf1FNf3TwPwma',
+    'default.jpg',
+    'Quản Trị Viên',
+    'active'
+);
