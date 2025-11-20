@@ -223,20 +223,14 @@ footer {
                </div>
                <div class="footer-static-block footer-certificate text-[13px] overflow-hidden w-full undefined">
                <div style="flex: 1;">
-                   <img src="assets/uploads/logo.png" alt="MUJI Logo" style="width: 200px; height: 200px;">
+                   <img src="assets/uploads/logo.png" alt="Resip Logo" style="width: 200px; height: 200px;">
                </div>
                <div>
-                <p style="font-size: 16px; text-align: left;"><b>CÔNG TY TNHH MIJU RETAIL</b></p>
-                <p style="font-size: 14px; text-align: left;">ĐKKD SỐ 0123456789 do sở KH & ĐT TP.HCM cấp ngày: 01/01/2024</p>
-                <p style="font-size: 14px; text-align: left;">Trụ sở chính: Phòng N1-306, Tầng 3, Đại học Kinh Tế, Nguyễn Văn Linh, Bình Chánh, TP.HCM</p>
+                <p style="font-size: 16px; text-align: left;"><b>CÔNG TY TNHH RESIP VIỆT NAM</b></p>
+                <p style="font-size: 14px; text-align: left;">Địa chỉ: 279 Nguyễn Tri Phương, Phường Diên Hồng, TP. Hồ Chí Minh, Việt Nam
+</p>
                 </div>
-               <div>
-                   <p>
-                   <a href="http://online.gov.vn/Home/WebDetails/123273">
-                       <img src="https://api.muji.com.vn/media/wysiwyg/home_block/logoSaleNoti.png" alt="Đã thông báo bộ công thương" width="195" height="74" loading="lazy">
-                   </a>
-                   </p>
-               </div>
+
                </div>
            </div>
            <!-- Footer Menu Section -->
@@ -245,9 +239,9 @@ footer {
                <div style="font-size: 18px;">
                <ul>
                    <li style="color: #931926"><strong>Về Miju</strong></li>
-                   <li><a title="Miju là gì?" href="/ptud_nhom2_ck/about.php">Miju là gì?</a></li>
+                   <li><a title="Miju là gì?" href="/nhom3ptudtmdt/about.php">Miju là gì?</a></li>
                    <li><a href=#>Thông báo</a></li>
-                   <li><a title="Câu hỏi thường gặp" href="/ptud_nhom2_ck/faq.php">Câu hỏi thường gặp</a></li>
+                   <li><a title="Câu hỏi thường gặp" href="/nhom3ptudtmdt/faq.php">Câu hỏi thường gặp</a></li>
                </ul>
                <ul style="margin-bottom: 24px;">
                    <li style="color: #931926"><strong>Cửa hàng Bán lẻ</strong></li>
