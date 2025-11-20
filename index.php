@@ -212,7 +212,7 @@ foreach ($result as $row) {
                         ?>
                         <div class="item">
                             <div class="thumb" style="border: 2px solid #026625; border-radius: 8px; padding: 10px;">
-                                <div class="photo" style="background-image:url(assets/uploads/<?php echo $row['p_featured_photo']; ?>); height: 248px; background-size: cover; border-radius: 8px;"></div>
+                                <div class="photo" style="background-image:url(assets/uploads/<?php echo $row['p_featured_photo']; ?>); height: 248px; background-size: cover; border-radius: 0px;"></div>
                                 <div class="overlay"></div>
                             </div>
                             <div class="text">
@@ -290,7 +290,7 @@ foreach ($result as $row) {
                         ?>
                         <div class="item">
                             <div class="thumb" style="border: 2px solid #026625; border-radius: 8px; padding: 10px;">
-                                <div class="photo" style="background-image:url(assets/uploads/<?php echo $row['p_featured_photo']; ?>); height: 248C:\xampp\htdocs\nhom3ptudtmdt>px; background-size: cover; border-radius: 8px;"></div>
+                                <div class="photo" style="background-image:url(assets/uploads/<?php echo $row['p_featured_photo']; ?>); height: 248px:\xampp\htdocs\nhom3ptudtmdt>px; background-size: cover; border-radius: 8px;"></div>
                                 <div class="overlay"></div>
                             </div>
                             <div class="text">
