@@ -238,8 +238,8 @@ footer {
    padding: 20px; ">
                <div style="font-size: 18px;">
                <ul>
-                   <li style="color: #931926"><strong>Về Miju</strong></li>
-                   <li><a title="Miju là gì?" href="/nhom3ptudtmdt/about.php">Miju là gì?</a></li>
+                   <li style="color: #931926"><strong>Về RESIP</strong></li>
+                   <li><a title="Miju là gì?" href="/nhom3ptudtmdt/about.php">Giới Thiệu Resip</a></li>
                    <li><a href=#>Thông báo</a></li>
                    <li><a title="Câu hỏi thường gặp" href="/nhom3ptudtmdt/faq.php">Câu hỏi thường gặp</a></li>
                </ul>
