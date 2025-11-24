@@ -176,7 +176,7 @@ foreach ($result as $row) {
                                         <div class="inner">Out Of Stock</div>
                                     </div>
                                 <?php else: ?>
-                                    <p><a href="product.php?id=<?php echo $row['p_id']; ?>" class="btn" style="background-color: #931926; color: white; border-radius: 5px; padding: 10px 15px; text-decoration: none;">Thêm vào giỏ hàng</a></p>
+                                    <p><a href="product.php?id=<?php echo $row['p_id']; ?>" class="btn" style="background-color: #026625; color: white; border-radius: 5px; padding: 10px 15px; text-decoration: none;">Thêm vào giỏ hàng</a></p>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -254,7 +254,7 @@ foreach ($result as $row) {
                                         <div class="inner">Out Of Stock</div>
                                     </div>
                                 <?php else: ?>
-                                    <p><a href="product.php?id=<?php echo $row['p_id']; ?>" class="btn" style="background-color: #931926; color: white; border-radius: 5px; padding: 10px 15px; text-decoration: none;">Thêm vào giỏ hàng</a></p>
+                                    <p><a href="product.php?id=<?php echo $row['p_id']; ?>" class="btn" style="background-color: #026625; color: white; border-radius: 5px; padding: 10px 15px; text-decoration: none;">Thêm vào giỏ hàng</a></p>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -332,7 +332,7 @@ foreach ($result as $row) {
                                         <div class="inner">Out Of Stock</div>
                                     </div>
                                 <?php else: ?>
-                                    <p><a href="product.php?id=<?php echo $row['p_id']; ?>" class="btn" style="background-color: #931926; color: white; border-radius: 5px; padding: 10px 15px; text-decoration: none;">Thêm vào giỏ hàng</a></p>
+                                    <p><a href="product.php?id=<?php echo $row['p_id']; ?>" class="btn" style="background-color: #026625; color: white; border-radius: 5px; padding: 10px 15px; text-decoration: none;">Thêm vào giỏ hàng</a></p>
                                 <?php endif; ?>
                             </div>
                         </div>

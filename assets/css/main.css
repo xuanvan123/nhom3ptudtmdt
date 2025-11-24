@@ -2147,3 +2147,21 @@ div.pagination span.disabled {
   padding-left: 15px;
   padding-right: 15px;
 }
+/* ép mỗi ô sản phẩm có chiều cao cố định */
+.owl-carousel .owl-item {
+  min-height: 350px; /* bạn chỉnh lại theo thiết kế */
+}
+
+/* ép luôn phần nội dung text bên dưới */
+.owl-carousel .owl-item .text {
+  min-height: 110px; /* fix phần tên + giá cho cao đều */
+}
+
+/* căn giữa tên khi nó ngắn */
+.owl-carousel .owl-item .text h3 {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
