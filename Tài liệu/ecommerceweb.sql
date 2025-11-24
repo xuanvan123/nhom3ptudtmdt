@@ -1989,3 +1989,17 @@ VALUES
 ('BÌNH NƯỚC', 1),
 ('ỐNG HÚT', 1);
 
+-- Xoá hết sản phẩm (nếu có)
+TRUNCATE tbl_product;
+
+-- Xoá hết danh mục con (nếu bạn đang dùng 3 cấp)
+TRUNCATE tbl_end_category;
+TRUNCATE tbl_mid_category;
+
+-- Xoá hết danh mục lớn
+TRUNCATE tbl_top_category;
+
+ALTER TABLE tbl_product 
+MODIFY ecat_id INT(11) NULL;
+
+
