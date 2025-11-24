@@ -1972,3 +1972,16 @@ VALUES (
 UPDATE tbl_user
 SET password = '$2b$10$RpXMBVTtY.05tizQgIM.g.StjpNjWUGUz8fXIvjF0ROIHgMWK.dFW'
 WHERE id IN (5,6,7,8,9,11);
+--------------------
+-- cập nhật dmsp 
+UPDATE tbl_top_category
+SET tcat_name = 'BÌNH NƯỚC'
+WHERE tcat_id = 6;
+
+UPDATE tbl_top_category
+SET tcat_name = 'ỐNG HÚT'
+WHERE tcat_id = 7;
+
+DELETE FROM tbl_top_category
+WHERE tcat_id IN (8, 9);
+
