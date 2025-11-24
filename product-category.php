@@ -181,9 +181,11 @@ if(isset($mid) && is_array($mid) && count($mid) > 0) {
 
 <div class="page-banner" style="background-color:#6e1518">
     <div class="inner">
-        <h1><?php echo "Danh mục"; ?> <?php echo $title; ?></h1>
+        <h1><?php echo $title; ?></h1>
     </div>
 </div>
+
+
 
 
 <div class="page">
@@ -208,8 +210,8 @@ if(isset($mid) && is_array($mid) && count($mid) > 0) {
 
 
             <div class="col-md-9">
-                <h3>Sản phẩm thuộc danh mục "<?php echo $title; ?>"</h3>
-                <div class="product product-cat">
+    <div class="product product-cat">
+
                     <div class="row">
                         <?php
                         $prod_count = 0;
