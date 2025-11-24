@@ -2065,3 +2065,18 @@ INSERT INTO tbl_product (
 ('Bình Nước Silicone Gấp Gọn 700ml', '', 209000, 100,
  'binh-nuoc-silicon-gap-gon-700ml.jpg',
  '', '', '', '', '', 0, 0, 1, 1);
+--------------------------
+
+--lần 2
+-- TẠO LẠI MID CATEGORY (danh mục giữa)
+INSERT INTO tbl_mid_category (mcat_name, tcat_id)
+VALUES
+('BÌNH NƯỚC', 1),  -- mcat_id = 1, thuộc TOP "BÌNH NƯỚC"
+('ỐNG HÚT',   2);  -- mcat_id = 2, thuộc TOP "ỐNG HÚT"
+
+-- TẠO LẠI END CATEGORY (danh mục con cuối)
+INSERT INTO tbl_end_category (ecat_name, mcat_id)
+VALUES
+('Tất Cả Bình Nước', 1),  -- ecat_id = 1 -> dùng cho bình nước
+('Tất Cả Ống Hút',   2);  -- ecat_id = 2 -> dùng cho ống hút
+----------------------------
