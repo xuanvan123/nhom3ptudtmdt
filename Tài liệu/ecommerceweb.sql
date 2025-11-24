@@ -1984,4 +1984,8 @@ WHERE tcat_id = 7;
 
 DELETE FROM tbl_top_category
 WHERE tcat_id IN (8, 9);
+INSERT INTO tbl_top_category (tcat_name, show_on_menu)
+VALUES
+('BÌNH NƯỚC', 1),
+('ỐNG HÚT', 1);
 
