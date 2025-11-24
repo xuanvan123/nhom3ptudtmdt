@@ -2002,4 +2002,38 @@ TRUNCATE tbl_top_category;
 ALTER TABLE tbl_product 
 MODIFY ecat_id INT(11) NULL;
 
+INSERT INTO tbl_product (
+  p_name,
+  p_old_price,
+  p_current_price,
+  p_qty,
+  p_featured_photo,
+  p_description,
+  p_short_description,
+  p_feature,
+  p_condition,
+  p_return_policy,
+  p_total_view,
+  p_is_featured,
+  p_is_active,
+  ecat_id
+) VALUES
+-- 1. Ống hút
+('Ống Hút Silicone Tái Sử Dụng',                '', 30000, 100, 'ong-hut-silicone-co-the-tai-su-dung.jpg', '', '', '', '', '', 0, 0, 1, 2),
+('Ống Hút Silicone Mẫu 2',                      '', 30000, 100, 'ong-hut-silicone-mau-2.jpg',               '', '', '', '', '', 0, 1, 1, 2),
+
+-- 2. Bình nước
+('Bình Nước Silicone Hộp Gấp Gọn 600ml',        '', 159000, 100, 'binh-nuoc-silicon-gap-gon-hinh-hop-600ml.jpg',        '', '', '', '', '', 0, 1, 1, 1),
+('Bình Nước Silicone Thể Thao 500ml',           '', 399000, 100, 'binh-nuoc-silicon-the-thao-co-quai-xach-gap-gon-500ml.jpg', '', '', '', '', '', 0, 0, 1, 1),
+('Bình Nước Silicone Gấp Gọn 600ml',            '', 189000, 100, 'binh-nuoc-silicon-gap-gon-600ml.jpg',                  '', '', '', '', '', 0, 0, 1, 1),
+('Bình Nước Silicone Hộp 600ml – Mẫu 2',        '', 159000, 100, 'binh-nuoc-silicon-gap-gon-hinh-hop-600ml-2.jpg',       '', '', '', '', '', 0, 0, 1, 1),
+('Bình Nước Silicone Thể Thao 600ml',           '', 399000, 100, 'binh-dung-nuoc-the-thao-silicone-co-quai-xach-gap-gon-600ml.jpg', '', '', '', '', '', 0, 1, 1, 1),
+('Bình Nước Silicone Gấp Gọn 650ml (Trơn)',     '', 199000, 100, 'binh-nuoc-silicon-gap-gon-650ml-mau-tron.jpg',        '', '', '', '', '', 0, 0, 1, 1),
+('Bình Nước Silicone Quai Xách 600ml',          '', 299000, 100, 'binh-nuoc-silicon-tien-loi-co-quai-xach-gap-gon-600ml.jpg', '', '', '', '', '', 0, 1, 1, 1),
+('Bình Nước Silicone Hồng 500ml + Ống Hút',     '', 349000, 100, 'binh-nuoc-the-thao-silicon-mau-hong-phan-500ml-tang-kem-ong-hut-silicon.jpg', '', '', '', '', '', 0, 0, 1, 1),
+('Bình Nước Silicone Loang 650ml + 425ml',      '', 279000, 100, 'binh-nuoc-silicon-gap-gon-650ml-co-van-loang-ngang-tang-binh-nuoc-silicon-gap-gon-425ml-cung-mau.jpg', '', '', '', '', '', 0, 0, 1, 1),
+('Bình Nước Silicone Gấp Gọn 500ml',            '', 169000, 100, 'binh-nuoc-silicon-gap-gon-500ml.jpg',                  '', '', '', '', '', 0, 0, 1, 1),
+('Bình Nước Silicone Gấp Gọn 500ml – Nhiều Màu','', 169000, 100, 'binh-nuoc-silicon-gap-gon-500ml-nhieu-mau-2.jpg',      '', '', '', '', '', 0, 0, 1, 1),
+('Bình Nước Silicone Gấp Gọn 700ml',            '', 209000, 100, 'binh-nuoc-silicon-gap-gon-700ml.jpg',                  '', '', '', '', '', 0, 0, 1, 1);
+
 
