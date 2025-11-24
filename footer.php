@@ -80,13 +80,13 @@ foreach ($result as $row)
 
 
 .home-newsletter .btn-theme {
-   background-color: #931926; /* Màu nền cho nút đăng ký */
+   background-color: #026625; /* Màu nền cho nút đăng ký */
    border: none;
    color: #fff; /* Màu chữ nút */
 }
 /* Nút Subscribe */
 .home-newsletter .input-group-btn button {
-   background-color: #931926 !important;
+   background-color: #026625 !important;
    color: #ffffff;
    border: none;
    border-radius: 5px;
@@ -97,7 +97,7 @@ foreach ($result as $row)
 
 
 .home-newsletter .btn-theme:hover {
-   background-color: #e67e22; /* Màu nền khi hover nút đăng ký */
+   background-color: #006910ff; /* Màu nền khi hover nút đăng ký */
 }
 /* Nút Subscribe hover */
 .home-newsletter .input-group-btn button:hover {
@@ -238,18 +238,18 @@ footer {
    padding: 20px; ">
                <div style="font-size: 18px;">
                <ul>
-                   <li style="color: #931926"><strong>Về RESIP</strong></li>
+                   <li style="color: #026625"><strong>Về RESIP</strong></li>
                    <li><a title="Miju là gì?" href="/nhom3ptudtmdt/about.php">Giới Thiệu Resip</a></li>
                    <li><a href=#>Thông báo</a></li>
                    <li><a title="Câu hỏi thường gặp" href="/nhom3ptudtmdt/faq.php">Câu hỏi thường gặp</a></li>
                </ul>
                <ul style="margin-bottom: 24px;">
-                   <li style="color: #931926"><strong>Cửa hàng Bán lẻ</strong></li>
+                   <li style="color: #026625"><strong>Cửa hàng Bán lẻ</strong></li>
                    <li><a title="Chính sách Đổi, Trả, Hoàn tiền" href=#>Chính sách Đổi, Trả, Hoàn tiền</a></li>
                    <li><a title="Danh sách cửa hàng" href=#>Danh sách cửa hàng</a></li>
                </ul>
                <ul>
-                   <li style="color: #931926"><strong>Cửa hàng Trực tuyến</strong></li>
+                   <li style="color: #026625"><strong>Cửa hàng Trực tuyến</strong></li>
                    <li><a title="Chính sách Bán hàng" href=#>Chính sách Bán hàng</a></li>
                    <li><a title="Chính sách Giao hàng" href=#>Chính sách Giao hàng</a></li>
                    <li><a title="Chính sách Trả hàng Hoàn tiền" href=#>Chính sách Trả hàng, Hoàn tiền</a></li>
@@ -363,7 +363,7 @@ Liên kết này chỉ có hiệu lực trong 24 giờ.
            ?>
                <form action="" method="post">
                    <?php $csrf->echoInputField(); ?>
-                   <p style="color: #931926; font-size: 18px"><strong>Đăng ký nhận tin từ Miju</strong></p>
+                   <p style="color: #026625; font-size: 18px"><strong>Đăng ký nhận tin từ Miju</strong></p>
                    <div class="input-group">
                        <input type="email" class="form-control" placeholder="<?php echo "Nhập Email của bạn vào"; ?>" name="email_subscribe">
                        <span class="input-group-btn">
