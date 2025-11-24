@@ -66,7 +66,7 @@ if( !isset($_REQUEST['id']) || !isset($_REQUEST['type']) ) {
                 }
                 $arr1 = array();
                 $arr2 = array();
-                for ($i=0; $i < count($mid); $i++) {
+if(isset($mid) && is_array($mid) && count($mid) > 0) {
                     if($mid2[$i] == $_REQUEST['id']) {
                         $arr1[] = $mid[$i];
                     }
@@ -213,7 +213,16 @@ if( !isset($_REQUEST['id']) || !isset($_REQUEST['type']) ) {
                     <div class="row">
                         <?php
                         $prod_count = 0;
-                        $query = "SELECT * FROM tbl_product WHERE ecat_id IN (" . implode(',', $final_ecat_ids) . ") AND p_is_active=1";
+
+// Nếu mảng rỗng => gán thành [0] để tránh lỗi SQL
+if (empty($final_ecat_ids)) {
+    $safe_ecat_ids = '0';
+} else {
+    $safe_ecat_ids = implode(',', $final_ecat_ids);
+}
+
+$query = "SELECT * FROM tbl_product WHERE ecat_id IN ($safe_ecat_ids) AND p_is_active=1";
+
 
 
                         if(isset($_GET['min_price']) && is_numeric($_GET['min_price'])) {

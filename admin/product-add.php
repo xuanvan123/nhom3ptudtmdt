@@ -2,22 +2,17 @@
 
 <?php
 if(isset($_POST['form1'])) {
+	    $tcat_id = $_POST['tcat_id'];
+    $mcat_id = isset($_POST['mcat_id']) && $_POST['mcat_id'] != '' ? $_POST['mcat_id'] : 0;
+    $ecat_id = isset($_POST['ecat_id']) && $_POST['ecat_id'] != '' ? $_POST['ecat_id'] : 0;
+
 	$valid = 1;
 
-    if(empty($_POST['tcat_id'])) {
-        $valid = 0;
-        $error_message .= "Bạn phải chọn một danh mục cấp cao<br>";
-    }
+   if( empty($_POST['tcat_id']) ) {
+    $valid = 0;
+    $error_message .= 'Bạn phải chọn một danh mục cấp cao<br>';
+}
 
-    if(empty($_POST['mcat_id'])) {
-        $valid = 0;
-        $error_message .= "Bạn phải chọn một danh mục cấp giữa<br>";
-    }
-
-    if(empty($_POST['ecat_id'])) {
-        $valid = 0;
-        $error_message .= "Bạn phải chọn một danh mục cấp cuối<br>";
-    }
 
     if(empty($_POST['p_name'])) {
         $valid = 0;
@@ -132,7 +127,7 @@ if(isset($_POST['form1'])) {
 										0,
 										$_POST['p_is_featured'],
 										$_POST['p_is_active'],
-										$_POST['ecat_id']
+										$ecat_id     // ← dùng biến đã xử lý 0 hoặc id thật
 									));
 
 		

@@ -9,15 +9,15 @@ if(isset($_POST['form1'])) {
         $error_message .= "Bạn phải chọn một danh mục cấp cao<br>";
     }
 
-    if(empty($_POST['mcat_id'])) {
-        $valid = 0;
-        $error_message .= "Bạn phải chọn một danh mục cấp giữa<br>";
-    }
+    // if(empty($_POST['mcat_id'])) {
+    //     $valid = 0;
+    //     $error_message .= "Bạn phải chọn một danh mục cấp giữa<br>";
+    // }
 
-    if(empty($_POST['ecat_id'])) {
-        $valid = 0;
-        $error_message .= "Bạn phải chọn một danh mục cấp cuối<br>";
-    }
+    // if(empty($_POST['ecat_id'])) {
+    //     $valid = 0;
+    //     $error_message .= "Bạn phải chọn một danh mục cấp cuối<br>";
+    // }
 
     if(empty($_POST['p_name'])) {
         $valid = 0;

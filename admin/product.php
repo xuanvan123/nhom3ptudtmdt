@@ -54,12 +54,13 @@
 															t4.tcat_name
 
 							                           	FROM tbl_product t1
-							                           	JOIN tbl_end_category t2
-							                           	ON t1.ecat_id = t2.ecat_id
-							                           	JOIN tbl_mid_category t3
-							                           	ON t2.mcat_id = t3.mcat_id
-							                           	JOIN tbl_top_category t4
-							                           	ON t3.tcat_id = t4.tcat_id
+							                           	LEFT JOIN tbl_end_category t2
+															ON t1.ecat_id = t2.ecat_id
+														LEFT JOIN tbl_mid_category t3
+															ON t2.mcat_id = t3.mcat_id
+														LEFT JOIN tbl_top_category t4
+															ON t3.tcat_id = t4.tcat_id
+
 							                           	ORDER BY t1.p_id DESC
 							                           	");
 							$statement->execute();
