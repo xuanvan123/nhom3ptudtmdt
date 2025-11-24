@@ -311,15 +311,37 @@ if($success_message1 != '') {
             <div class="col-md-12">
                 <div class="breadcrumb mb_30">
                     <ul>
-                        <li><a href="<?php echo BASE_URL; ?>">TRANG CHỦ</a></li>
-                        <li>></li>
-                        <li><a href="<?php echo BASE_URL.'product-category.php?id='.$tcat_id.'&type=top-category' ?>"><?php echo $tcat_name; ?></a></li>
-                        <li>></li>
-                        <li><a href="<?php echo BASE_URL.'product-category.php?id='.$mcat_id.'&type=mid-category' ?>"><?php echo $mcat_name; ?></a></li>
-                        <li>></li>
-                        <li><a href="<?php echo BASE_URL.'product-category.php?id='.$ecat_id.'&type=end-category' ?>"><?php echo $ecat_name; ?></a></li>
-                        <li>></li>
-                        <li><?php echo $p_name; ?></li>
+                     <li><a href="<?php echo BASE_URL; ?>">TRANG CHỦ</a></li>
+
+<?php if (isset($tcat_id, $tcat_name) && $tcat_id != ''): ?>
+    <li>></li>
+    <li>
+        <a href="<?php echo BASE_URL.'product-category.php?id='.$tcat_id.'&type=top-category'; ?>">
+            <?php echo $tcat_name; ?>
+        </a>
+    </li>
+<?php endif; ?>
+
+<?php if (isset($mcat_id, $mcat_name) && $mcat_id != ''): ?>
+    <li>></li>
+    <li>
+        <a href="<?php echo BASE_URL.'product-category.php?id='.$mcat_id.'&type=mid-category'; ?>">
+            <?php echo $mcat_name; ?>
+        </a>
+    </li>
+<?php endif; ?>
+
+<?php if (isset($ecat_id, $ecat_name) && $ecat_id != ''): ?>
+    <li>></li>
+    <li>
+        <a href="<?php echo BASE_URL.'product-category.php?id='.$ecat_id.'&type=end-category'; ?>">
+            <?php echo $ecat_name; ?>
+        </a>
+    </li>
+<?php endif; ?>
+
+<li>></li>
+<li><?php echo $p_name; ?></li>
                     </ul>
                 </div>
                 <div class="product">
