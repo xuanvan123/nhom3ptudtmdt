@@ -1977,33 +1977,31 @@ SET password = '$2b$10$RpXMBVTtY.05tizQgIM.g.StjpNjWUGUz8fXIvjF0ROIHgMWK.dFW'
 WHERE id IN (5,6,7,8,9,11);
 --------------------
 -- cập nhật dmsp 
-UPDATE tbl_top_category
-SET tcat_name = 'BÌNH NƯỚC'
-WHERE tcat_id = 6;
+-- ============================
+-- RESET DANH MỤC 2 CẤP
+-- ============================
 
-UPDATE tbl_top_category
-SET tcat_name = 'ỐNG HÚT'
-WHERE tcat_id = 7;
+TRUNCATE tbl_mid_category;
+TRUNCATE tbl_end_category;
+TRUNCATE tbl_top_category;
 
-DELETE FROM tbl_top_category
-WHERE tcat_id IN (8, 9);
 INSERT INTO tbl_top_category (tcat_name, show_on_menu)
 VALUES
 ('BÌNH NƯỚC', 1),
 ('ỐNG HÚT', 1);
 
--- Xoá hết sản phẩm (nếu có)
+-- ============================
+-- RESET SẢN PHẨM RE-SIP
+-- ============================
+
 TRUNCATE tbl_product;
-
--- Xoá hết danh mục con (nếu bạn đang dùng 3 cấp)
-TRUNCATE tbl_end_category;
-TRUNCATE tbl_mid_category;
-
--- Xoá hết danh mục lớn
-TRUNCATE tbl_top_category;
 
 ALTER TABLE tbl_product 
 MODIFY ecat_id INT(11) NULL;
+
+-- ============================
+-- THÊM 14 SẢN PHẨM RESIP
+-- ============================
 
 INSERT INTO tbl_product (
   p_name,
@@ -2021,22 +2019,21 @@ INSERT INTO tbl_product (
   p_is_active,
   ecat_id
 ) VALUES
--- 1. Ống hút
-('Ống Hút Silicone Tái Sử Dụng',                '', 30000, 100, 'ong-hut-silicone-co-the-tai-su-dung.jpg', '', '', '', '', '', 0, 0, 1, 2),
-('Ống Hút Silicone Mẫu 2',                      '', 30000, 100, 'ong-hut-silicone-mau-2.jpg',               '', '', '', '', '', 0, 1, 1, 2),
 
--- 2. Bình nước
-('Bình Nước Silicone Hộp Gấp Gọn 600ml',        '', 159000, 100, 'binh-nuoc-silicon-gap-gon-hinh-hop-600ml.jpg',        '', '', '', '', '', 0, 1, 1, 1),
-('Bình Nước Silicone Thể Thao 500ml',           '', 399000, 100, 'binh-nuoc-silicon-the-thao-co-quai-xach-gap-gon-500ml.jpg', '', '', '', '', '', 0, 0, 1, 1),
-('Bình Nước Silicone Gấp Gọn 600ml',            '', 189000, 100, 'binh-nuoc-silicon-gap-gon-600ml.jpg',                  '', '', '', '', '', 0, 0, 1, 1),
-('Bình Nước Silicone Hộp 600ml – Mẫu 2',        '', 159000, 100, 'binh-nuoc-silicon-gap-gon-hinh-hop-600ml-2.jpg',       '', '', '', '', '', 0, 0, 1, 1),
-('Bình Nước Silicone Thể Thao 600ml',           '', 399000, 100, 'binh-dung-nuoc-the-thao-silicone-co-quai-xach-gap-gon-600ml.jpg', '', '', '', '', '', 0, 1, 1, 1),
-('Bình Nước Silicone Gấp Gọn 650ml (Trơn)',     '', 199000, 100, 'binh-nuoc-silicon-gap-gon-650ml-mau-tron.jpg',        '', '', '', '', '', 0, 0, 1, 1),
-('Bình Nước Silicone Quai Xách 600ml',          '', 299000, 100, 'binh-nuoc-silicon-tien-loi-co-quai-xach-gap-gon-600ml.jpg', '', '', '', '', '', 0, 1, 1, 1),
-('Bình Nước Silicone Hồng 500ml + Ống Hút',     '', 349000, 100, 'binh-nuoc-the-thao-silicon-mau-hong-phan-500ml-tang-kem-ong-hut-silicon.jpg', '', '', '', '', '', 0, 0, 1, 1),
-('Bình Nước Silicone Loang 650ml + 425ml',      '', 279000, 100, 'binh-nuoc-silicon-gap-gon-650ml-co-van-loang-ngang-tang-binh-nuoc-silicon-gap-gon-425ml-cung-mau.jpg', '', '', '', '', '', 0, 0, 1, 1),
-('Bình Nước Silicone Gấp Gọn 500ml',            '', 169000, 100, 'binh-nuoc-silicon-gap-gon-500ml.jpg',                  '', '', '', '', '', 0, 0, 1, 1),
-('Bình Nước Silicone Gấp Gọn 500ml – Nhiều Màu','', 169000, 100, 'binh-nuoc-silicon-gap-gon-500ml-nhieu-mau-2.jpg',      '', '', '', '', '', 0, 0, 1, 1),
-('Bình Nước Silicone Gấp Gọn 700ml',            '', 209000, 100, 'binh-nuoc-silicon-gap-gon-700ml.jpg',                  '', '', '', '', '', 0, 0, 1, 1);
+-- Ống hút
+('Ống Hút Silicone Tái Sử Dụng', '', 30000, 100, 'ong-hut-silicone-co-the-tai-su-dung.jpg', '', '', '', '', '', 0, 0, 1, 2),
+('Ống Hút Silicone Mẫu 2',       '', 30000, 100, 'ong-hut-silicone-mau-2.jpg',               '', '', '', '', '', 0, 1, 1, 2),
 
-
+-- Bình nước
+('Bình Nước Silicone Hộp Gấp Gọn 600ml', '', 159000, 100, 'binh-nuoc-silicon-gap-gon-hinh-hop-600ml.jpg', '', '', '', '', '', 0, 1, 1, 1),
+('Bình Nước Silicone Thể Thao 500ml',      '', 399000, 100, 'binh-nuoc-silicon-the-thao-co-quai-xach-gap-gon-500ml.jpg', '', '', '', '', '', 0, 0, 1, 1),
+('Bình Nước Silicone Gấp Gọn 600ml',       '', 189000, 100, 'binh-nuoc-silicon-gap-gon-600ml.jpg', '', '', '', '', '', 0, 0, 1, 1),
+('Bình Nước Silicone Hộp 600ml – Mẫu 2',   '', 159000, 100, 'binh-nuoc-silicon-gap-gon-hinh-hop-600ml-2.jpg', '', '', '', '', '', 0, 0, 1, 1),
+('Bình Nước Silicone Thể Thao 600ml',      '', 399000, 100, 'binh-dung-nuoc-the-thao-silicone-co-quai-xach-gap-gon-600ml.jpg', '', '', '', '', '', 0, 1, 1, 1),
+('Bình Nước Silicone Gấp Gọn 650ml (Trơn)', '', 199000, 100, 'binh-nuoc-silicon-gap-gon-650ml-mau-tron.jpg', '', '', '', '', '', 0, 0, 1, 1),
+('Bình Nước Silicone Quai Xách 600ml',     '', 299000, 100, 'binh-nuoc-silicon-tien-loi-co-quai-xach-gap-gon-600ml.jpg', '', '', '', '', '', 0, 1, 1, 1),
+('Bình Nước Silicone Hồng 500ml + Ống Hút', '', 349000, 100, 'binh-nuoc-the-thao-silicon-mau-hong-phan-500ml-tang-kem-ong-hut-silicon.jpg', '', '', '', '', '', 0, 0, 1, 1),
+('Bình Nước Silicone Loang 650ml + 425ml', '', 279000, 100, 'binh-nuoc-silicon-gap-gon-650ml-co-van-loang-ngang-tang-binh-nuoc-silicon-gap-gon-425ml-cung-mau.jpg', '', '', '', '', '', 0, 0, 1, 1),
+('Bình Nước Silicone Gấp Gọn 500ml',       '', 169000, 100, 'binh-nuoc-silicon-gap-gon-500ml.jpg', '', '', '', '', '', 0, 0, 1, 1),
+('Bình Nước Silicone Gấp Gọn 500ml – Nhiều Màu', '', 169000, 100, 'binh-nuoc-silicon-gap-gon-500ml-nhieu-mau-2.jpg', '', '', '', '', '', 0, 0, 1, 1),
+('Bình Nước Silicone Gấp Gọn 700ml',        '', 209000, 100, 'binh-nuoc-silicon-gap-gon-700ml.jpg', '', '', '', '', '', 0, 0, 1, 1);
