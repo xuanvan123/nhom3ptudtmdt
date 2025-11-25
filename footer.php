@@ -363,7 +363,7 @@ Liên kết này chỉ có hiệu lực trong 24 giờ.
            ?>
                <form action="" method="post">
                    <?php $csrf->echoInputField(); ?>
-                   <p style="color: #026625; font-size: 18px"><strong>Đăng ký nhận tin từ Miju</strong></p>
+                   <p style="color: #026625; font-size: 18px"><strong>Đăng ký nhận tin từ ReSip</strong></p>
                    <div class="input-group">
                        <input type="email" class="form-control" placeholder="<?php echo "Nhập Email của bạn vào"; ?>" name="email_subscribe">
                        <span class="input-group-btn">
