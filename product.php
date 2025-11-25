@@ -441,7 +441,7 @@ if($success_message1 != '') {
                             </div>
                             <div class="p-short-des">
                                 <p>
-                                    <?php echo $p_short_description; ?>
+                                    <?php echo nl2br($p_short_description); ?>
                                 </p>
                             </div>
                             <form action="" method="post">
@@ -552,7 +552,7 @@ if($success_message1 != '') {
                                         if($p_description == '') {
                                             echo "Chưa có mô tả sản phẩm";
                                         } else {
-                                            echo $p_description;
+                                            echo nl2br($p_description);   // ✅ dòng này đổi thôi
                                         }
                                         ?>
                                     </p>

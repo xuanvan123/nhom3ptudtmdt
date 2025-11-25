@@ -1976,7 +1976,7 @@ UPDATE tbl_user
 SET password = '$2b$10$RpXMBVTtY.05tizQgIM.g.StjpNjWUGUz8fXIvjF0ROIHgMWK.dFW'
 WHERE id IN (5,6,7,8,9,11);
 --------------------
--- cập nhật dmsp LẦN 1
+-- cập nhật dmsp LẦN 1 =====================
 -- ============================
 -- RESET DANH MỤC 2 CẤP
 -- ============================
@@ -2065,7 +2065,7 @@ INSERT INTO tbl_product (
 ('Bình Nước Silicone Gấp Gọn 700ml', '', 209000, 100,
  'binh-nuoc-silicon-gap-gon-700ml.jpg',
  '', '', '', '', '', 0, 0, 1, 1);
---------------------------
+--------------------------================ HẾT LẦN 1
 
 --lần 2
 -- TẠO LẠI MID CATEGORY (danh mục giữa)
