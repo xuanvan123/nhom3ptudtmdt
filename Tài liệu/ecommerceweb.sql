@@ -1976,7 +1976,7 @@ UPDATE tbl_user
 SET password = '$2b$10$RpXMBVTtY.05tizQgIM.g.StjpNjWUGUz8fXIvjF0ROIHgMWK.dFW'
 WHERE id IN (5,6,7,8,9,11);
 --------------------
--- cập nhật dmsp LẦN 1 =====================
+-- cập nhật dmsp 
 -- ============================
 -- RESET DANH MỤC 2 CẤP
 -- ============================
@@ -2000,7 +2000,7 @@ ALTER TABLE tbl_product
 MODIFY ecat_id INT(11) NULL;
 
 -- ============================
--- THÊM 11 SẢN PHẨM RESIP (TIÊU ĐỀ RÚT GỌN)
+-- THÊM 11 SẢN PHẨM RESIP (CÓ MÔ TẢ & MÔ TẢ NGẮN)
 -- ============================
 
 INSERT INTO tbl_product (
@@ -2020,52 +2020,151 @@ INSERT INTO tbl_product (
   ecat_id
 ) VALUES
 
--- Ống hút
+-- 1. Ống hút
 ('Ống Hút Silicone Mẫu 1', '', 30000, 100,
  'ong-hut-silicone-co-the-tai-su-dung.jpg',
- '', '', '', '', '', 0, 0, 1, 2),
+ 'Khám phá sự tiện lợi với Ống Hút Silicone Mẫu 1 – lựa chọn tái sử dụng thay thế cho ống hút nhựa dùng một lần. Chất liệu silicone thực phẩm cao cấp, không chứa BPA, êm môi và an toàn cho cả trẻ em lẫn người lớn. Thiết kế có thể gập lại gọn gàng, dễ mang theo trong túi xách, balo khi đi làm, đi học hay du lịch.
+
+Ống hút có khả năng mở rộng và thu gọn linh hoạt, giúp việc vệ sinh bên trong trở nên dễ dàng hơn. Bề mặt trơn mịn hạn chế bám cặn, phù hợp cho nhiều loại thức uống từ nước lọc, nước trái cây đến trà sữa hoặc sinh tố. Nhiều lựa chọn màu sắc giúp bạn thoải mái phối cùng bình nước hoặc phong cách cá nhân.
+
+Sản phẩm thân thiện với môi trường, tái sử dụng nhiều lần, hỗ trợ giảm rác thải nhựa trong sinh hoạt hằng ngày. Một phụ kiện nhỏ nhưng mang lại thay đổi tích cực cho lối sống xanh, tiết kiệm và hiện đại.',
+ 'Chất liệu: Silicone thực phẩm cao cấp, không BPA
+Chiều dài: 244mm
+Màu sắc: Hồng, Tím, Xanh biển, Xanh mint, Xanh ngọc, Xanh lá
+Tính năng: Tái sử dụng, có thể gập gọn, dễ vệ sinh, dùng cho nhiều loại đồ uống',
+ '', '', '', 0, 0, 1, 2),
 
 ('Ống Hút Silicone Mẫu 2', '', 30000, 100,
  'ong-hut-silicone-mau-2.jpg',
- '', '', '', '', '', 0, 1, 1, 2),
+ 'Ống Hút Silicone Mẫu 2 là phiên bản tiện dụng với chiều dài 250mm, phù hợp cho ly cao, bình nước thể thao và nhiều loại cốc khác nhau. Chất liệu silicone thực phẩm cao cấp, không chứa BPA, đàn hồi tốt và êm môi khi sử dụng thường xuyên.
 
--- Bình nước
+Thiết kế có thể gập và mở linh hoạt giúp dễ dàng vệ sinh phần bên trong, hạn chế cặn bám của trà sữa, sinh tố hoặc thức uống có topping. Nhiều màu sắc như hồng, xám, trắng, xanh biển, tím và xanh lá giúp bạn dễ dàng phối hợp với bình nước hoặc phong cách cá nhân.
+
+Sản phẩm có thể tái sử dụng lâu dài, hạn chế ống hút nhựa dùng một lần, góp phần bảo vệ môi trường và tiết kiệm chi phí. Phù hợp sử dụng tại nhà, văn phòng, quán cà phê, mang đi học hoặc đi chơi.',
+ 'Chất liệu: Silicone thực phẩm cao cấp, không BPA
+Chiều dài: 250mm
+Màu sắc: Hồng, Xám, Trắng, Xanh biển, Tím, Xanh lá
+Tính năng: Có thể gập, dễ vệ sinh, dùng lại nhiều lần, phù hợp ly cao và bình nước',
+ '', '', '', 0, 1, 1, 2),
+
+-- 2. Bình nước
 ('Bình Nước Silicone Gấp Gọn Hình Hộp 600ml', '', 159000, 100,
  'binh-nuoc-silicon-gap-gon-hinh-hop-600ml.jpg',
- '', '', '', '', '', 0, 1, 1, 1),
+ 'Bình Nước Silicone Gấp Gọn Hình Hộp 600ml sở hữu thiết kế dạng khối vuông lạ mắt, giúp cầm nắm chắc tay và dễ xếp gọn trong balo hoặc ngăn tủ. Chất liệu silicone thực phẩm cao cấp, không BPA, an toàn cho sức khỏe và phù hợp sử dụng hằng ngày.
+
+Khi cần, bình có thể mở ra với dung tích 600ml cho nhu cầu uống nước trong học tập, làm việc hoặc luyện tập thể thao. Khi không dùng, chỉ cần gấp gọn để tiết kiệm diện tích, đặc biệt hữu ích khi di chuyển hoặc du lịch. Nắp vặn kín hạn chế tình trạng rò rỉ nước trong túi.
+
+Thiết kế hiện đại, màu sắc trẻ trung giúp bình vừa là vật dụng cần thiết, vừa là phụ kiện thể hiện phong cách sống năng động và thân thiện môi trường.',
+ 'Dung tích: 600ml
+Chất liệu: Silicone thực phẩm cao cấp, không BPA
+Thiết kế: Dạng hình hộp, gấp gọn tiết kiệm diện tích
+Tính năng: Chống rò rỉ, phù hợp mang đi học, đi làm, du lịch',
+ '', '', '', 0, 1, 1, 1),
 
 ('Bình Nước Thể Thao Silicone 600ml Có Quai Xách', '', 399000, 100,
  'binh-dung-nuoc-the-thao-silicone-co-quai-xach-gap-gon-600ml.jpg',
- '', '', '', '', '', 0, 1, 1, 1),
+ 'Bình Nước Thể Thao Silicone 600ml Có Quai Xách được thiết kế cho người yêu thích vận động và di chuyển nhiều. Thân bình bằng silicone dẻo, có thể gấp gọn khi không sử dụng, giúp tiết kiệm diện tích trong balo thể thao, túi gym hoặc hành lý du lịch.
+
+Dung tích 600ml đáp ứng tốt nhu cầu uống nước trong các buổi tập gym, chạy bộ, leo núi hoặc dã ngoại. Nắp bình kín, hạn chế rò rỉ và đi kèm quai xách chắc chắn dễ cầm hoặc treo trên balo. Chất liệu silicone thực phẩm không BPA giúp an tâm khi dùng cho nước lọc, nước trái cây hay thức uống thể thao.
+
+Sản phẩm hướng tới lối sống tiện lợi, năng động và thân thiện với môi trường khi có thể tái sử dụng lâu dài.',
+ 'Dung tích: 600ml
+Chất liệu: Silicone thực phẩm, không BPA
+Thiết kế: Thân mềm có thể gấp gọn, quai xách tiện mang theo
+Phù hợp: Tập gym, chạy bộ, dã ngoại, du lịch',
+ '', '', '', 0, 1, 1, 1),
 
 ('Combo Silicon 650ml Trơn + 425ml', '', 199000, 100,
  'binh-nuoc-silicon-gap-gon-650ml-mau-tron.jpg',
- '', '', '', '', '', 0, 0, 1, 1),
+ 'Combo Silicon 650ml Trơn + 425ml mang đến bộ đôi bình nước tiện lợi cho nhiều nhu cầu khác nhau. Bình 650ml dùng cho các hoạt động ngoài trời, làm việc và học tập; bình 425ml nhỏ gọn phù hợp mang theo cà phê, trà sữa hoặc dùng cho trẻ em.
+
+Cả hai đều được làm từ silicone thực phẩm cao cấp, không chứa BPA, có khả năng gấp gọn giúp tiết kiệm không gian khi cất giữ hoặc di chuyển. Thiết kế màu trơn đơn giản, dễ phối với nhiều phong cách và không gian làm việc. Nắp kín giúp chống rò rỉ khi bỏ vào túi xách hoặc balo.
+
+Combo là lựa chọn kinh tế cho gia đình, cặp đôi hoặc những ai thích linh hoạt trong việc sử dụng dung tích bình nước khác nhau trong ngày.',
+ 'Gồm: 1 bình 650ml + 1 bình 425ml
+Chất liệu: Silicone thực phẩm, không BPA
+Thiết kế: Gấp gọn, màu trơn tối giản
+Ưu điểm: Tiện mang theo, chống rò rỉ, dùng được cho nhiều đối tượng',
+ '', '', '', 0, 0, 1, 1),
 
 ('Bình Nước Silicone 600ml Có Quai Xách Tiện Lợi', '', 299000, 100,
  'binh-nuoc-silicon-tien-loi-co-quai-xach-gap-gon-600ml.jpg',
- '', '', '', '', '', 0, 1, 1, 1),
+ 'Bình Nước Silicone 600ml Có Quai Xách Tiện Lợi là giải pháp gọn nhẹ cho nhu cầu uống nước mỗi ngày. Thân bình bằng silicone mềm có thể gấp lại khi nước đã uống hết, giảm chiếm diện tích trong túi xách hoặc balo.
+
+Dung tích 600ml phù hợp cho dân văn phòng, học sinh – sinh viên và người thường xuyên di chuyển. Quai xách chắc chắn giúp cầm tay hoặc treo trên balo dễ dàng. Chất liệu silicone thực phẩm không BPA, an toàn cho sức khỏe và dễ vệ sinh sau khi sử dụng.
+
+Thiết kế hiện đại, màu sắc trẻ trung giúp bình trở thành phụ kiện thời trang, đồng hành trong mọi hoạt động từ đi làm, đi học đến dã ngoại.',
+ 'Dung tích: 600ml
+Chất liệu: Silicone thực phẩm, không BPA
+Tính năng: Gấp gọn, có quai xách, chống rò rỉ
+Ứng dụng: Đi làm, đi học, du lịch, dã ngoại hằng ngày',
+ '', '', '', 0, 1, 1, 1),
 
 ('Bình Nước Silicon Hồng 500ml Kèm Ống Hút', '', 349000, 100,
  'binh-nuoc-the-thao-silicon-mau-hong-phan-500ml-tang-kem-ong-hut-silicon.jpg',
- '', '', '', '', '', 0, 0, 1, 1),
+ 'Bình Nước Silicon Hồng 500ml Kèm Ống Hút là lựa chọn đáng yêu cho những ai yêu thích tông hồng nữ tính và phong cách dễ thương. Bình có dung tích 500ml, thân silicone dẻo gấp gọn tiện lợi, đi kèm ống hút silicone đồng bộ giúp uống nước dễ dàng hơn, đặc biệt khi dùng cho trẻ em hoặc khi đang di chuyển.
+
+Chất liệu silicone thực phẩm cao cấp, không BPA, an toàn cho sức khỏe và phù hợp với nhiều loại đồ uống. Nắp chống rò rỉ kết hợp khóa chắc chắn, hạn chế tràn nước khi để trong balo hoặc túi xách. Thiết kế tông hồng phấn nổi bật, phù hợp làm quà tặng cho bạn bè, người thân.
+
+Bộ sản phẩm hỗ trợ xây dựng thói quen uống nước thường xuyên hơn, đồng thời vẫn đảm bảo yếu tố thẩm mỹ và thân thiện môi trường.',
+ 'Dung tích: 500ml
+Màu sắc: Hồng phấn
+Kèm theo: Ống hút silicone đồng bộ
+Tính năng: Gấp gọn, chống rò rỉ, phù hợp cho cả trẻ em và người lớn',
+ '', '', '', 0, 0, 1, 1),
 
 ('Combo Bình Nước Silicon 650ml Loang + 425ml', '', 279000, 100,
  'binh-nuoc-silicon-gap-gon-650ml-co-van-loang-ngang-tang-binh-nuoc-silicon-gap-gon-425ml-cung-mau.jpg',
- '', '', '', '', '', 0, 0, 1, 1),
+ 'Combo Bình Nước Silicon 650ml Loang + 425ml gây ấn tượng với hiệu ứng màu loang độc đáo, tạo điểm nhấn khác biệt so với các mẫu bình nước thông thường. Bộ đôi gồm bình lớn 650ml dùng cho cả ngày và bình nhỏ 425ml phù hợp cho các buổi dạo phố, cà phê hoặc cho bé mang đến trường.
+
+Thân bình bằng silicone thực phẩm cao cấp, có thể gấp gọn khi không dùng, giảm diện tích cất giữ. Nắp kín giúp chống rò rỉ, thích hợp mang theo trong balo, túi xách hoặc vali du lịch. Màu sắc loang đồng bộ giữa hai bình tạo cảm giác thời trang, trẻ trung.
+
+Đây là lựa chọn lý tưởng cho người thích phong cách nổi bật, muốn sở hữu bộ bình nước vừa tiện dụng vừa đẹp mắt, đáp ứng nhiều nhu cầu sử dụng khác nhau.',
+ 'Gồm: Bình 650ml + bình 425ml
+Màu sắc: Hiệu ứng loang đồng bộ
+Chất liệu: Silicone thực phẩm, gấp gọn được
+Phù hợp: Đi học, đi làm, du lịch, làm quà tặng',
+ '', '', '', 0, 0, 1, 1),
 
 ('Bình Nước Silicone Gấp Gọn 500ml', '', 169000, 100,
  'binh-nuoc-silicon-gap-gon-500ml.jpg',
- '', '', '', '', '', 0, 0, 1, 1),
+ 'Bình Nước Silicone Gấp Gọn 500ml là lựa chọn linh hoạt cho những ai ưu tiên sự gọn nhẹ nhưng vẫn đủ dung tích cho nhu cầu uống nước hằng ngày. Khi mở ra, bình có dung tích 500ml; khi gấp lại, kích thước thu gọn đáng kể, dễ dàng đặt trong túi xách, balo hoặc ngăn kéo làm việc.
+
+Chất liệu silicone thực phẩm cao cấp, không BPA, chịu được nhiệt độ từ nước lạnh đến nước ấm trong mức khuyến nghị. Nắp vặn kín và gioăng silicon giúp hạn chế rò rỉ, phù hợp khi mang đi học, đi làm hay tập thể thao. Bề mặt bình dễ vệ sinh, có thể dùng nhiều lần thay thế chai nhựa dùng một lần.
+
+Thiết kế đơn giản, dễ dùng, phù hợp cho nhiều lứa tuổi và phong cách sống hướng đến sự tiện lợi và thân thiện môi trường.',
+ 'Dung tích: 500ml
+Chất liệu: Silicone thực phẩm, không BPA
+Thiết kế: Gấp gọn, dễ mang theo
+Ứng dụng: Đi học, đi làm, tập luyện, dã ngoại',
+ '', '', '', 0, 0, 1, 1),
 
 ('Bình Nước Silicon 500ml – Nhiều Màu', '', 169000, 100,
  'binh-nuoc-silicon-gap-gon-500ml-nhieu-mau-2.jpg',
- '', '', '', '', '', 0, 0, 1, 1),
+ 'Bình Nước Silicon 500ml – Nhiều Màu mang lại sự lựa chọn đa dạng cho người dùng yêu thích phối màu theo cá tính. Dung tích 500ml vừa đủ cho một buổi làm việc, học tập hoặc luyện tập ngắn. Thân bình silicone dẻo có thể gấp gọn khi không sử dụng, giảm chiếm diện tích trong túi.
+
+Nhiều phiên bản màu sắc trẻ trung giúp bạn dễ dàng chọn mẫu phù hợp với phong cách cá nhân hoặc dùng làm quà tặng. Chất liệu silicone thực phẩm an toàn, không BPA, kết hợp nắp kín chống rò rỉ giúp yên tâm khi bỏ trong balo hoặc túi xách.
+
+Sản phẩm phù hợp cho học sinh – sinh viên, nhân viên văn phòng, người luyện tập thể thao và những ai muốn xây dựng thói quen uống nước lành mạnh mỗi ngày.',
+ 'Dung tích: 500ml
+Màu sắc: Nhiều màu để lựa chọn
+Chất liệu: Silicone thực phẩm, không BPA
+Tính năng: Gấp gọn, chống rò rỉ, dễ vệ sinh',
+ '', '', '', 0, 0, 1, 1),
 
 ('Bình Nước Silicone Gấp Gọn 700ml', '', 209000, 100,
  'binh-nuoc-silicon-gap-gon-700ml.jpg',
- '', '', '', '', '', 0, 0, 1, 1);
---------------------------================ HẾT LẦN 1
+ 'Bình Nước Silicone Gấp Gọn 700ml là lựa chọn dung tích lớn cho những ngày hoạt động nhiều hoặc các chuyến đi dài. Với sức chứa 700ml, bình đáp ứng tốt nhu cầu uống nước trong suốt buổi làm việc, tập luyện hoặc du lịch mà không cần châm nước quá thường xuyên.
+
+Thân bình bằng silicone thực phẩm cao cấp, có thể gấp gọn khi nước đã uống hết, thuận tiện cất trong balo hoặc vali. Nắp kín chống rò rỉ cùng thiết kế chắc chắn giúp đồng hành tốt trong các hoạt động ngoài trời như leo núi, cắm trại, trekking.
+
+Sản phẩm hướng đến người dùng yêu thích sự linh hoạt, bền bỉ và thân thiện môi trường, đồng thời vẫn đảm bảo tính thẩm mỹ nhờ kiểu dáng hiện đại.',
+ 'Dung tích: 700ml
+Chất liệu: Silicone thực phẩm, không BPA
+Thiết kế: Gấp gọn, dung tích lớn
+Phù hợp: Du lịch, dã ngoại, hoạt động thể thao cường độ cao',
+ '', '', '', 0, 0, 1, 1);
+
 
 --lần 2
 -- TẠO LẠI MID CATEGORY (danh mục giữa)
