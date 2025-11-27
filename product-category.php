@@ -137,7 +137,7 @@ if(isset($mid) && is_array($mid) && count($mid) > 0) {
     .price-filter-form h4 {
         font-size: 18px;
         font-weight: bold;
-        color: #6e1518;
+        color: #026625;
         margin-bottom: 15px;
     }
 
@@ -161,7 +161,7 @@ if(isset($mid) && is_array($mid) && count($mid) > 0) {
 
 
     .price-filter-form .btn {
-        background-color: #6e1518;
+        background-color: #026625;
         color: #fff;
         border: none;
         border-radius: 6px;
@@ -172,14 +172,14 @@ if(isset($mid) && is_array($mid) && count($mid) > 0) {
 
 
     .price-filter-form .btn:hover {
-        background-color: #8a1d1f;
+        background-color: #026625;
     }
 </style>
 
 
 
 
-<div class="page-banner" style="background-color:#6e1518">
+<div class="page-banner" style="background-color:#28A745">
     <div class="inner">
         <h1><?php echo $title; ?></h1>
     </div>
@@ -308,7 +308,7 @@ $query = "SELECT * FROM tbl_product WHERE ecat_id IN ($safe_ecat_ids) AND p_is_a
 .add-to-cart-btn {
     display: inline-block;
     padding: 10px 20px; /* Soft padding */
-    background-color: #aa535a !important; /* Button color updated */
+    background-color: #026625 !important; /* Button color updated */
     color: white; /* Text color */
     border-radius: 30px; /* Rounded corners */
     text-decoration: none;

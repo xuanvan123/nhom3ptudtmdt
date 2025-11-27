@@ -11,7 +11,7 @@ foreach ($result as $row) {
 }
 ?>
 
-<div class="page-banner" style="background-color:#6e1518;">
+<div class="page-banner" style="background-color:#28A745;">
     <div class="inner text-center">
         <h1><?php echo $about_title; ?></h1>
     </div>

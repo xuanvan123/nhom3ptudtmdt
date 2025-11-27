@@ -14,7 +14,7 @@ foreach ($result as $row) {
 
 <style>
     .page-banner {
-        background-color: #6e1518;
+        background-color: #28A745;
         text-align: center;
         padding: 50px 0;
         color: #fff;
