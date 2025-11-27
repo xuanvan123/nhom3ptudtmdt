@@ -243,7 +243,7 @@ footer {
                    <li><a href=#>Thông báo</a></li>
                    <li><a title="Câu hỏi thường gặp" href="/nhom3ptudtmdt/faq.php">Câu hỏi thường gặp</a></li>
                </ul>
-               <ul style="margin-bottom: 24px;">
+                  <ul style="margin-bottom: 24px;">
                    <li style="color: #026625"><strong>Cửa hàng Bán lẻ</strong></li>
                    <li><a title="Chính sách Đổi, Trả, Hoàn tiền" href=#>Chính sách Đổi, Trả, Hoàn tiền</a></li>
                    <li><a title="Danh sách cửa hàng" href=#>Danh sách cửa hàng</a></li>
@@ -490,6 +490,8 @@ foreach ($result as $row) {
 <?php echo $before_body; ?>
 </body>
 </html>
+
+
 
 
 
