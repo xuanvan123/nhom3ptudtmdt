@@ -15,8 +15,8 @@ foreach ($result as $row) {
     $contact_map_iframe = $row['contact_map_iframe'];
 
     // Thay đổi giá trị trực tiếp theo yêu cầu
-    $contact_email = 'miju_support@gmail.com'; // Cập nhật email
-    $contact_phone = '02873061976'; // Cập nhật số điện thoại
+    $contact_email = 'hotro.resip@gmail.com'; // Cập nhật email
+    $contact_phone = ' 0123 456 789'; // Cập nhật số điện thoại
     $contact_address = '279 Đường Nguyễn Tri Phương. Phường 5. Quận 10. TP. Hồ Chí Minh. Việt Nam'; // Cập nhật địa chỉ
 }
 ?>

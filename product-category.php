@@ -249,7 +249,7 @@ $query = "SELECT * FROM tbl_product WHERE ecat_id IN ($safe_ecat_ids) AND p_is_a
                                 ?>
                                 <div class="col-md-4 item item-product-cat">
                                     <div class="inner">
-                                        <div class="thumb" style="border: 2px solid #936921; border-radius: 12px; overflow: hidden;">
+                                        <div class="thumb" style="border: 2px solid #026625; border-radius: 12px; overflow: hidden;">
                                             <div class="photo" style="background-image:url(assets/uploads/<?php echo $row['p_featured_photo']; ?>); border-radius: 12px;"></div>
                                             <div class="overlay"></div>
                                         </div>
