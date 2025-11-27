@@ -494,7 +494,7 @@ if($success_message1 != '') {
                             </div>
                             <div class="p-price">
                                 <span style="font-size:14px;"><?php echo "Giá" ?></span><br>
-                                <span style="color:#931926">
+                                <span style="color:#026625">
                                     <?php if($p_old_price!=''): ?>
                                         <del><?php echo number_format($p_old_price); ?> <?php echo "VNĐ"?></del>
                                     <?php endif; ?>
@@ -509,10 +509,10 @@ if($success_message1 != '') {
                                 <input type="number" class="input-text qty" step="1" min="1" max="" name="p_qty" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric">
                             </div>
                             <div class="btn btn-rounded">
-                                <input type="submit" value="Thêm vào giỏ hàng" name="form_add_to_cart" style="background-color: #931926; color: #fff; border-radius: 25px; padding: 10px 20px;">
+                                <input type="submit" value="Thêm vào giỏ hàng" name="form_add_to_cart" style="background-color: #026625; color: #fff; border-radius: 25px; padding: 10px 20px;">
                             </div>
 
-                            <!-- <li class="list-inline-item" style="list-style: none; padding: 0;margin: 15px;"><a href="checkout.php" class="btn btn-rounded" style="background-color: #931926; color: #fff; border-radius: 25px; padding: 10px 20px;">Thanh toán</a></li> -->
+                            <!-- <li class="list-inline-item" style="list-style: none; padding: 0;margin: 15px;"><a href="checkout.php" class="btn btn-rounded" style="background-color: #026625; color: #fff; border-radius: 25px; padding: 10px 20px;">Thanh toán</a></li> -->
                             </form>
                             <div class="share">
                                 <p>Chia sẻ sản phẩm</p>
@@ -522,14 +522,14 @@ if($success_message1 != '') {
                     </div>
 <style>
 .nav-tabs p {
-    color: #931926;
+    color: #026625;
 }
 <style>
     .nav-tabs > li > a {
-        border-bottom: 2px solid #931926;
+        border-bottom: 2px solid #026625;
     }
     .nav-tabs > li.active > a {
-        border-bottom: 2px solid #931926 !important;
+        border-bottom: 2px solid #026625 !important;
     }
 </style>
 
