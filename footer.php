@@ -243,20 +243,6 @@ footer {
                    <li><a href=#>Thông báo</a></li>
                    <li><a title="Câu hỏi thường gặp" href="/nhom3ptudtmdt/faq.php">Câu hỏi thường gặp</a></li>
                </ul>
-               <ul style="margin-bottom: 24px;">
-                   <li style="color: #026625"><strong>Cửa hàng Bán lẻ</strong></li>
-                   <li><a title="Chính sách Đổi, Trả, Hoàn tiền" href=#>Chính sách Đổi, Trả, Hoàn tiền</a></li>
-                   <li><a title="Danh sách cửa hàng" href=#>Danh sách cửa hàng</a></li>
-               </ul>
-               <ul>
-                   <li style="color: #026625"><strong>Cửa hàng Trực tuyến</strong></li>
-                   <li><a title="Chính sách Bán hàng" href=#>Chính sách Bán hàng</a></li>
-                   <li><a title="Chính sách Giao hàng" href=#>Chính sách Giao hàng</a></li>
-                   <li><a title="Chính sách Trả hàng Hoàn tiền" href=#>Chính sách Trả hàng, Hoàn tiền</a></li>
-                   <li><a title="Chính sách Đổi hàng" href=#>Chính sách Đổi hàng</a></li>
-                   <li><a title="Chính sách Bảo hành" href=#>Chính sách Bảo hành</a></li>
-                   <li><a title="Chính sách Bảo mật" href=#>Chính sách Bảo mật</a></li>
-               </ul>
                </div>
            </div>
            <!-- Subscribe Section -->
@@ -490,6 +476,7 @@ foreach ($result as $row) {
 <?php echo $before_body; ?>
 </body>
 </html>
+
 
 
 
