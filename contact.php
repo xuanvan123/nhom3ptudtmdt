@@ -119,21 +119,21 @@ foreach ($result as $row) {
                                 <?php $csrf->echoInputField(); ?>
                                 <div class="form-group mb-3">
                                     <label for="name">Họ và tên</label>
-                                    <input type="text" class="form-control" name="visitor_name" placeholder="Nhập họ và tên" style="border: 2px solid #931926;">
+                                    <input type="text" class="form-control" name="visitor_name" placeholder="Nhập họ và tên" style="border: 2px solid #026625;">
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="email">Địa chỉ email</label>
-                                    <input type="email" class="form-control" name="visitor_email" placeholder="Nhập địa chỉ email" style="border: 2px solid #931926;">
+                                    <input type="email" class="form-control" name="visitor_email" placeholder="Nhập địa chỉ email" style="border: 2px solid #026625;">
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="phone">Số điện thoại</label>
-                                    <input type="text" class="form-control" name="visitor_phone" placeholder="Nhập số điện thoại" style="border: 2px solid #931926;">
+                                    <input type="text" class="form-control" name="visitor_phone" placeholder="Nhập số điện thoại" style="border: 2px solid #026625;">
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="message">Nội dung</label>
-                                    <textarea name="visitor_message" class="form-control" rows="5" placeholder="Nhập nội dung tin nhắn" style="border: 2px solid #931926;"></textarea>
+                                    <textarea name="visitor_message" class="form-control" rows="5" placeholder="Nhập nội dung tin nhắn" style="border: 2px solid #026625;"></textarea>
                                 </div>
-                                <button type="submit" class="btn" style="background-color: #931926; color: #fff; width: 100%;" name="form_contact">Gửi tin nhắn</button>
+                                <button type="submit" class="btn" style="background-color: #026625; color: #fff; width: 100%;" name="form_contact">Gửi tin nhắn</button>
                             </form>
                         </div>
                     </div>

@@ -22,14 +22,14 @@ foreach ($result as $row) {
 
 
     .panel-title {
-        color: #931926;
+        color: #026625;
         font-size: 18px;
         font-weight: bold;
     }
 
 
     .panel-heading {
-        border: 1px solid #931926;
+        border: 1px solid #026625;
         border-radius: 5px;
         background-color: #fff;
         cursor: pointer;
@@ -39,13 +39,13 @@ foreach ($result as $row) {
 
 
     .panel-heading:hover {
-        background-color: #931926;
+        background-color: #54d773ff;
         color: #fff;
     }
 
 
     .panel-body {
-        border: 1px solid #931926;
+        border: 1px solid #026625;
         border-radius: 5px;
         padding: 15px;
         background-color: #fdf5f5;
@@ -53,7 +53,7 @@ foreach ($result as $row) {
 
 
     .label-primary {
-        background-color: #931926;
+        background-color: #026625;
         color: #fff;
         font-size: 14px;
         padding: 5px 10px;

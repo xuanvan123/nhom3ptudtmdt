@@ -45,7 +45,7 @@ body {
 
 
 .card-title {
-   color: #931926;
+   color: #026625;
    font-weight: bold;
    font-size: 18px;
    margin-top: 15px;
@@ -66,8 +66,8 @@ body {
 
 
 .btn-primary:hover {
-   background-color: #931926;
-   border-color: #931926;
+   background-color: #026625;
+   border-color: #026625;
 }
 
 
